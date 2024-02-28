@@ -1,0 +1,163 @@
+:root {
+    --main-color: #171717;
+    --secondary-color: #292929;
+    --contrast-color: #0264b5;
+    --secondary-contrast-color: #00b7ff;
+}
+body, html {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--main-color);
+    box-sizing: border-box;
+    color: white;
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 36px;
+  top: 36px;
+  color: white;
+}
+
+.bm-cross-button {
+  width: 36px;
+  height: 36px;
+  color: white;
+}
+
+.bm-menu {
+  background: var(--secondary-color);
+  padding: 2.5em 1em 0;
+  font-size: 1.15em;
+}
+.bm-item-list {
+  color: #b8b7ad;
+  height: fit-content !important;
+  .bm-item {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+  a {
+    text-decoration: none;
+    color: var(--contrast-color);
+    transition: all 0.3s;
+    &:hover {
+      color: var(--secondary-contrast-color);
+      background: rgba(0, 0, 0, 0.3)
+
+    }
+  }
+}
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.intro {
+  width: 100%;
+  height: 100vh;
+  background: url("./assets/space-background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center;
+  background-size: 100vw;
+  overflow: hidden;
+  text-align: center;
+}
+
+.svgwrapper {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+	margin: 0 auto;
+  width: fit-content;
+  &:hover .shape {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
+    stroke: var(--secondary-contrast-color);
+  }
+}
+.shape {
+  
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  fill: transparent;
+  stroke: var(--contrast-color);
+  border-bottom: 5px solid black;
+  transition: stroke-dashoffset 0.8s, stroke-dasharray 0.8s, stroke 0.8s;
+}
+
+.text {
+  line-height: 32px;
+  letter-spacing: 8px;
+  font-size: 1.375rem;
+  color: white;
+  position: relative;
+  top: -48px;
+}
+
+.repoCard {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 25% 1% 59%  15%;
+  grid-template-areas: "name name" "hr hr" "desc icons" "language language";
+  place-items: center start;
+  padding: 15px;
+  gap: 5px;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  height: 100%;
+  
+  
+  .name {
+    grid-area: name;
+  }
+  
+  .hr {
+    grid-area: hr;
+    width: 100%;
+    height: 100%;
+    background-color: var(--contrast-color);
+  }
+  
+  .desc {
+    grid-area: desc;
+    overflow: hidden;
+    max-height: inherit;
+    height: 100%;
+    
+  }
+  
+  .icons {
+    grid-area: icons;
+  }
+  
+  
+  .language {
+    grid-area: language
+  }
+}
+
+.projectsWrapper {
+  margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+  a {
+    margin: 30px;
+    width: calc(50% - 60px);
+    text-decoration: none;
+    color: white;
+  }
+}
+
+
