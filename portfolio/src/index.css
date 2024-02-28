@@ -103,6 +103,25 @@ body, html {
   top: -48px;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+
+}
+::-webkit-resizer {
+
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--contrast-color);
+}
+
+.desc::-webkit-scrollbar {
+  width: 4px;
+  height: 10px;
+}
 .repoCard {
   display: grid;
   grid-template-columns: 70% 30%;
@@ -113,11 +132,12 @@ body, html {
   gap: 5px;
   background-color: var(--secondary-color);
   border-radius: 5px;
-  height: 100%;
+  height: 230px;
   
   
   .name {
     grid-area: name;
+    height: 100%;
   }
   
   .hr {
@@ -129,19 +149,36 @@ body, html {
   
   .desc {
     grid-area: desc;
-    overflow: hidden;
-    max-height: inherit;
-    height: 100%;
-    
+    overflow: auto;
+    max-height: 100%; 
   }
+
+  
   
   .icons {
     grid-area: icons;
+    height: 100%;
+    place-self: stretch center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+    p {
+      margin: 5px;
+    }
   }
   
   
   .language {
-    grid-area: language
+    grid-area: language;
+    height: 100%;
+    span {
+      background-color: var(--secondary-contrast-color);
+      padding: 0.3rem;
+      color: var(--secondary-color);
+      border-radius: 50px;
+    }
   }
 }
 
@@ -151,7 +188,7 @@ body, html {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 50%;
+    width: 60%;
   a {
     margin: 30px;
     width: calc(50% - 60px);

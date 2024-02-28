@@ -1,7 +1,7 @@
 
 import useFetch from "react-fetch-hook";
 import { Link } from "react-router-dom";
-import ReadMoreReact from 'read-more-react';
+
 export default function Home() {
     const { data } = useFetch('https://api.github.com/users/wizzzytm/repos');
     if (!data) return null;
@@ -31,11 +31,17 @@ export default function Home() {
                             <div className="hr"></div>
                             <div className="desc">
                                
+                                <p>
+                                {repo.description}
+                                </p>
+
                             </div>
                             <div className="icons">
-                                <p>Stars: {repo.stargazers_count}</p>
                                 <p>
-                                    Watchers: {repo.watchers_count}
+                                <i className="fa-solid fa-star" style={{color: "#FFD43B"}}></i> {repo.stargazers_count}
+                                </p>
+                                <p>
+                                <i className="fa-solid fa-eye" style={{color: "#ffffff"}}></i> {repo.watchers_count}
                                 </p>
                             </div>
                             <div className="language">
