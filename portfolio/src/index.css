@@ -107,9 +107,6 @@ body, html {
   width: 10px;
 
 }
-::-webkit-resizer {
-
-}
 ::-webkit-scrollbar-track {
   background: transparent;
 }
