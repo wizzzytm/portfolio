@@ -206,89 +206,135 @@ body, html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  .contactWrapper {
+    width: 60%;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  
+  .contactTitle {
+    background-color: var(--secondary-color);
+    padding: 0.75rem;
+    font-size: 125%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+  
+  .contactForm {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    input, textarea {
+      border: none;
+      border-radius: 3px;
+      padding: 10px;
+      resize: vertical;
+      outline: none;
+      box-sizing: content-box;
+      border-bottom: solid 3px transparent;
+      margin: 5px 0;
+      margin-bottom: 1rem;
+    }
+    textarea {
+      height: 130px;
+    }
+    label {
+      font-weight: 600;
+    }
+    input:focus, textarea:focus {
+      border-bottom: solid 3px var(--contrast-color);
+    }
+  }
+  
+  
+  .contact {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    .submit__button {
+      background-color: var(--contrast-color);
+    }
+    
+    .contact-list {
+      list-style-type: none;
+      padding-right: 20px;
+    }
+    
+    .list-item {
+      line-height: 4;
+      color: white;
+    }
+    
+    .contact-text {
+      font: 300 16px 'Lato', sans-serif;
+      letter-spacing: 1.9px;
+      color: white;
+      transition: all 0.3s;
+      text-align: center;
+    }
+    
+    .place {
+      margin-left: 32px;
+    }
+    
+    .phone {
+      margin-left: 25px;
+    }
+    
+    .gmail {
+      margin-left: 26px;
+    }
+  }
 }
 
-.contactWrapper {
-  width: 60%;
-  background-color: var(--secondary-color);
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-}
-
-.contactTitle {
-  background-color: var(--secondary-color);
-  padding: 0.75rem;
-  font-size: 125%;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
-
-.contactForm {
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2rem;
+.about {
+  width: 100%;
+  background-color: var(--main-color);
   display: flex;
   flex-direction: column;
-  input, textarea {
-    border: none;
-    border-radius: 3px;
-    padding: 10px;
-    resize: vertical;
-    outline: none;
-    box-sizing: content-box;
-    border-bottom: solid 3px transparent;
-    margin: 5px 0;
-    margin-bottom: 1rem;
-  }
-  textarea {
-    height: 130px;
-  }
-  label {
-    font-weight: 600;
-  }
-  input:focus, textarea:focus {
-    border-bottom: solid 3px var(--contrast-color);
-  }
-}
-
-
-.contact {
-  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: start;
+  .aboutTitle {
+    padding: 0.75rem;
+    font-size: 150%;
+    letter-spacing: 0.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    border-bottom: 3px  solid var(--contrast-color);
+    margin: 2rem;
+    h1 {
+      margin: 0;
+    }
+  }
+  
+  .aboutWrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin: 2rem;
+  }
+  
+  .aboutImage {
+    padding: 1.3rem;
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  
+  }
+  .aboutText {
+    padding: 1.3rem;
+    text-align: justify;
+  }
 }
 
-.submit__button {
-  background-color: var(--contrast-color);
-}
-
-.contact-list {
-  list-style-type: none;
-  padding-right: 20px;
-}
-
-.list-item {
-  line-height: 4;
-  color: white;
-}
-
-.contact-text {
-  font: 300 16px 'Lato', sans-serif;
-  letter-spacing: 1.9px;
-  color: white;
-  transition: all 0.3s;
-  text-align: center;
-}
-
-.place {
-  margin-left: 32px;
-}
-
-.phone {
-  margin-left: 25px;
-}
-
-.gmail {
-  margin-left: 26px;
+.experience {
+  
 }

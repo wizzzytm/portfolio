@@ -26,9 +26,6 @@ export default function BurgerMenu() {
             <Link to='/'>
                 <h3>Porftolio</h3>
             </Link>
-            <Link to='/experience'>
-                <h3>Experience</h3>
-            </Link>
             <Link to='/about'>
                 <h3>About me</h3>
             </Link>
