@@ -1,7 +1,6 @@
 "use client";
-
-import { useScroll, motion } from "framer-motion"
-import { useRef } from "react";
+import { useScroll, motion, useTransform, useInView } from "framer-motion"
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom"
 
 interface RepoProps {
@@ -16,18 +15,14 @@ interface RepoProps {
 
 export default function Repo(props: RepoProps) {
     const ref = useRef<HTMLDivElement>(null);
-    const {scrollYProgress} = useScroll({
-        target: ref,
-        offset: ["0 1", "1.33 1"]
-    });
-
     return(
         <Link to={props.html_url} key={props.id}>
             <motion.div 
-            style={{
-                scale: scrollYProgress,
-                opacity: scrollYProgress
-            }}
+            style={{transition: "0.1s all"}}
+            initial={{opacity: 0, scale: 0.5}}
+            whileInView={{opacity: 1, scale: 1}}
+            transition={{opacity: 1, scale: 1}}
+
             ref={ref} className="repoCard">
                 <div className="name">
                     <h3>{props.name}</h3>
