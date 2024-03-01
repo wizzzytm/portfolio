@@ -122,6 +122,12 @@ body, html {
   width: 4px;
   height: 10px;
 }
+.hr {
+  grid-area: hr;
+  width: 100%;
+  height: 100%;
+  background-color: var(--contrast-color);
+}
 .repoCard {
   display: grid;
   grid-template-columns: 70% 30%;
@@ -140,12 +146,7 @@ body, html {
     height: 100%;
   }
   
-  .hr {
-    grid-area: hr;
-    width: 100%;
-    height: 100%;
-    background-color: var(--contrast-color);
-  }
+  
   
   .desc {
     grid-area: desc;
@@ -293,7 +294,7 @@ body, html {
 
 .about {
   width: 100%;
-  background-color: var(--main-color);
+  background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -335,6 +336,136 @@ body, html {
   }
 }
 
-.experience {
-  
+.exp {
+  width: 100%;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .expTitle {
+    padding: 0.55rem;
+    font-size: 125%;
+    letter-spacing: 0.1rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin: 1.5rem;
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .expWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 70%;
+  }
+
+  .expText {
+    width: 100%;
+    text-align: justify;
+    font-size: 120%;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-bottom: 3px solid var(--contrast-color);
+    padding-bottom: 2rem;
+  }
+
+  .expTile {
+    height: 150px;
+    background-color: var(--secondary-color);
+    width: 280px;
+    margin: 1rem;
+    border-radius: 5px;
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: 59% 1% 40%;
+    grid-template-rows: 25% 75%;
+    grid-template-areas: "name hr level" "img hr level";
+    place-items: center start;
+    padding: 20px;
+    gap: 5px;
+    
+    .expImg {
+      grid-area: img;
+      display: flex;
+      align-items: center; 
+      justify-content: center;
+      place-self: stretch;
+      img {
+        max-height: 90%;
+        width: auto;
+      }
+    }
+    .expName {
+      grid-area: name;
+      text-align: center;
+      width: 100%;
+      font-size: 125%;
+    }
+    .expDots {
+      display: flex;
+      grid-area: level;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+    }
+
+    .expDotLang {
+      display: flex;
+      justify-self: center;
+      grid-area: level;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 999px;
+      padding: 0.5rem;
+      font-size: 125%;
+            
+    }
+    .langImg {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .dot {
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      margin: 0.28rem;
+    }
+    .novice, .beginner, .intermediate, .advanced, .master, .expDotLang {
+      background-color: var(--secondary-contrast-color); 
+    }
+    
+    .dimmed {
+      background-color: var(--main-color);
+    }
+  }
+
+  .expCategory {
+    display: flex;
+    width: 100%;
+    margin: 0 0 1.5rem;
+    padding: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: 3px solid var(--contrast-color);
+    h3 {
+      width: 100%;
+      text-align: center;
+      margin: 0;      
+      margin-bottom: 0.5rem;
+    }
+    &:last-child {
+      border: none;
+    }
+  }
 }
