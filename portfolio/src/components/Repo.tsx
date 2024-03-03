@@ -18,12 +18,14 @@ export default function Repo(props: RepoProps) {
     return(
         <Link to={props.html_url} key={props.id}>
             <motion.div 
+            whileHover={{ scale: 1.1 }}
+            whileFocus={{ scale: 1.1 }}
             style={{transition: "0.1s all"}}
             initial={{opacity: 0, scale: 0.5}}
             whileInView={{opacity: 1, scale: 1}}
             transition={{opacity: 1, scale: 1}}
 
-            ref={ref} className="repoCard">
+            ref={ref} className="repoCard hoverAnim">
                 <div className="name">
                     <h3>{props.name}</h3>
                 </div>

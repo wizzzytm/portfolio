@@ -8,9 +8,6 @@ import Repo from "../components/Repo";
 
 export default function Home() {
     const { data } = useFetch('https://api.github.com/users/wizzzytm/repos');
-   
-    
-   
     if (!data) return null;
     return (
         

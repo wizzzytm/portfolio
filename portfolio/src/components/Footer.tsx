@@ -1,6 +1,6 @@
 import SendIcon from '@mui/icons-material/Send';
 import Button from '@mui/material/Button';
-import { FormEvent, useRef, useState } from 'react';
+import {useRef, useState } from 'react';
 import emailjs from '@emailjs/browser'
 import {motion} from 'framer-motion'
 
