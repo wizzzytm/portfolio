@@ -1,7 +1,4 @@
-import { useScroll, useTransform, motion } from "framer-motion";
-import { useRef } from "react";
 import useFetch from "react-fetch-hook";
-import { Link } from "react-router-dom";
 import Repo from "../components/Repo";
 
 

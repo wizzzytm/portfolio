@@ -1,7 +1,7 @@
 "use client";
-import { useScroll, motion, useTransform, useInView } from "framer-motion"
-import { useEffect, useRef } from "react";
-import { Link } from "react-router-dom"
+import {motion} from "framer-motion"
+import {useRef} from "react";
+import {Link} from "react-router-dom"
 
 interface RepoProps {
     html_url: string,
