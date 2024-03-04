@@ -20,8 +20,8 @@ export default function Footer() {
 
     const sendEmail = (e: any) => {
         e.preventDefault();
-        console.log('submit called');
         emailjs.sendForm(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, e.target, import.meta.env.VITE_PUBLIC_KEY);
+        alert("Message sent succesfully");
         setFormData({ email_from: "", message: "" })
     }
 
