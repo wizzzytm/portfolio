@@ -52,9 +52,9 @@ export default function Footer() {
                     <ul className="contact-list">
                         <li className="list-item"><i className="fa fa-map-marker fa-2x"><span className="contact-text place">Starogard Gdański, Poland</span></i></li>
                         
-                        <li className="list-item"><i className="fa fa-phone fa-2x"><span className="contact-text phone">123123123</span></i></li>
+                        <li className="list-item"><i className="fa fa-phone fa-2x"><span className="contact-text phone">+48 733 129 686</span></i></li>
                         
-                        <li className="list-item"><i className="fa fa-envelope fa-2x"><span className="contact-text gmail">hitmeup@gmail.com</span></i></li>
+                        <li className="list-item"><i className="fa fa-envelope fa-2x"><span className="contact-text gmail">adrian.kolek01@gmail.com</span></i></li>
             
                     </ul>
                 </div>
